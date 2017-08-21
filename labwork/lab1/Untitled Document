@@ -1,0 +1,33 @@
+import tensorflow as tf
+x=[2,4,6,8,10]
+y=[6,7,8,9,10]
+#for i in range(1,5):
+ #   print ('Enter x value')
+  #  a=input()
+   # x.append(float(a))
+    #print ('Enter y value')
+    #b=input()
+    #y.append(float(b))
+meanx=sum(x)/5
+#print('Mean of X=')
+#print(meanx)
+meany=sum(y)/5
+#print('Mean of Y=')
+#print(meany)
+varx=0
+vary=0
+covar=0
+for i in range(0,5):
+    varx=varx+((x[i]-meanx)*(x[i]-meanx))
+print('Variance of X=')
+print(varx)
+covar=covar+((x[i]-meanx)*(y[i]-meany))
+print('Co-variance=')
+print(covar)
+c=covar/varx
+print('C=')
+print(c)
+m=meany-c*meanx
+print('M=')
+print(m)
+
